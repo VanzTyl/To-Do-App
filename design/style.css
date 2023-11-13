@@ -13,9 +13,9 @@
     src: url('assets/fonts/comicneue-regular-webfont.woff') format('woff');
 }
 
-.main-screen{
+.main-screenOff{
     background-color: none;
-    visibility: visible;
+    visibility: hidden;
 }
 
 .head{
@@ -39,7 +39,7 @@
     text-align: center;
     width: max-content;
     height: max-content;
-    font-size: 50px;
+    font-size: 35px;
     letter-spacing: 15px;
     user-select: none;
     color: #5C504D;
@@ -68,15 +68,161 @@
     text-align: center;
     height: max-content;
     width: max-content;
-    animation: scrollingAnim 7.5s linear infinite;
+    animation: scrollingAnim 10s linear infinite;
     font-weight: 1000;
+}
+
+.category-container{
+    background-color: none;
+    position: absolute;
+    width: 75%;
+    height: 74%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 63%;
+    display: flex;
+    flex-direction: column;
+}
+
+.category{
+    background-color: #F4EFD7;
+    border: 2px solid #5C504D;
+    width: 100%;
+    height: 15%;
+    border-radius: 15px;
+    margin-top: 20px;
+    display: flex;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgb(58, 57, 57);
+}
+
+.category:hover{
+    transition: .5s ease all;
+    height: 15.5%;
+    border: #312d2c 2px solid;
+}
+
+.image-box{
+    background-color: transparent;
+    width: 25%;
+    border-right: #5C504D 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container{
+    background-color: transparent;
+    border-radius: 12px;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img{
+    background-color: transparent;
+    object-fit: contain;
+    width: max-content;
+    height: max-content;
+}
+
+.category-title{
+    background-color: transparent;
+    padding-left: 12.5%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 60%;
+}
+
+.category-title span{
+    background-color: transparent;
+    width: max-content;
+    height: max-content;
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+.edit-button{
+    background-color: transparent;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-button i{
+    font-size: 30px;
+    width: max-content;
+    height: max-content;
+    background-color: transparent;
+}
+
+.add-category{
+    background-color: transparent;
+    border: 2px dashed #5C504D;
+    width: 100%;
+    height: 15%;
+    border-radius: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-category .icon{
+    width: 100%;
+    height: 70%;
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.add-category .icon i{
+    background-color: transparent;
+    width: max-content;
+    height: max-content;
+    font-size: 30px;
+    color: #3f3d3d;
+}
+
+.add-category .subheading{
+    width: 100%;
+    background-color: transparent;
+    height: 30%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.add-category .subheading span{
+    background-color: transparent;
+    font-size: 12px;
+}
+
+.update{
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    bottom: 0;
+    transform: translateX(-50%);
+    left: 50%;
 }
 
 @-webkit-keyframes scrollingAnim{
     from {
-        transform: translate3d(150%, 0, 0);
+        transform: translate3d(210%, 0, 0);
       }
       to {
-        transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-210%, 0, 0);
       }
 }
